@@ -7,7 +7,7 @@ const Manager = () => {
  const[passwordArray,setPasswordArray]=useState([]);
 
  const getPassword=async()=>{
-  let req=await fetch("http://localhost:3000/")
+  let req=await fetch(`${import.meta.env.VITE_API_URL}`)
 
    const password = await req.json()
     setPasswordArray(password);
@@ -24,7 +24,7 @@ useEffect(() => {
   const id = form.id || uuidv4();
 
   if (form.id) {
-    await fetch("http://localhost:3000/", {
+    await fetch(`${import.meta.env.VITE_API_URL}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
@@ -34,7 +34,7 @@ useEffect(() => {
   }
 
   
-  await fetch("http://localhost:3000/", {
+  await fetch(`${import.meta.env.VITE_API_URL}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
