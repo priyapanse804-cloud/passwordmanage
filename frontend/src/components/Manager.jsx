@@ -86,7 +86,7 @@ useEffect(() => {
  });
   console.log("delete",id);
   setPasswordArray(passwordArray.filter(item=>item.id!==id))
-  let res= await fetch("http://localhost:3000/",{method:"DELETE",headers:{"Content-Type":"application/json"},
+  let res= await fetch(`${import.meta.env.VITE_API_URL}`,{method:"DELETE",headers:{"Content-Type":"application/json"},
     body:JSON.stringify({id})
   })
   //localStorage.setItem("password",JSON.stringify(passwordArray.filter(item=>item.id!==id)))
