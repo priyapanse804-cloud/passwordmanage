@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer components{
+  .mycontainer{
+    @apply container px-30 py-16 mx-auto;
+  }
+}
+
+* Chrome, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* IE & Edge */
+* {
+  -ms-overflow-style: none;
+}
