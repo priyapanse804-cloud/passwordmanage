@@ -229,7 +229,7 @@ useEffect(() => {
           )}
 
           {passwordArray.length !== 0 && (
-            <div className="min-w-[700px] w-full">
+            <div className="w-full min-w-0 overflow-hidden">
               <table className="w-full table-auto">
                 <thead className="bg-slate-900 text-white">
                   <tr>
