@@ -8,7 +8,7 @@ dotenv.config()
 // import { MongoClient } from 'mongodb'
 
 // Connection URL
-const url = 'mongodb+srv://admin:shopping123@cluster0.qmguru9.mongodb.net/password';
+const url = process.env.MONGODB_URI;
 const client = new MongoClient(url);
 
 // Database Name
